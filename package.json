@@ -1,0 +1,25 @@
+{
+  "name": "cse341-project1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/princegodwyll15/cse341-project1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/princegodwyll15/cse341-project1/issues"
+  },
+  "homepage": "https://github.com/princegodwyll15/cse341-project1#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.14.2"
+  }
+}
