@@ -6,7 +6,7 @@
     "version": "1.0.0"
   },
   
-  "host": "https://cse341-project01-t17d.onrender.com",
+  "host": "cse341-project01-t17d.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
