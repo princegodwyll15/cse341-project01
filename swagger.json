@@ -5,7 +5,6 @@
     "description": "API for managing contacts",
     "version": "1.0.0"
   },
-  
   "host": "cse341-project01-t17d.onrender.com",
   "basePath": "/",
   "schemes": [
@@ -97,8 +96,14 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "404": {
             "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },

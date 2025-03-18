@@ -17,17 +17,29 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
-    //#swagger.tags = [contacts]
-  const contactId = new ObjectId(req.params.id);
-  const result = await mongodb
-    .getDatabase()
-    .collection("contacts")
-    .findOne({ _id: contactId });
-  if (result) {
-    res.setHeader("Content-Type", "application/json");
-    res.status(200).json(result);
-  } else {
-    res.status(404).json({ message: "Contact not found" });
+  //#swagger.tags = [contacts]
+  const contactId = req.params.id;
+
+  // Validate the ObjectId
+  if (!ObjectId.isValid(contactId)) {
+    return res.status(400).json({ message: "Invalid ID format" });
+  }
+
+  try {
+    const id = new ObjectId(contactId);
+    const result = await mongodb
+      .getDatabase()
+      .collection("contacts")
+      .findOne({ _id: id });
+
+    if (result) {
+      res.setHeader("Content-Type", "application/json");
+      res.status(200).json(result);
+    } else {
+      res.status(404).json({ message: "Contact not found" });
+    }
+  } catch (err) {
+    res.status(500).json({ message: "An error occurred", error: err });
   }
 };
 

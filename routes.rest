@@ -30,8 +30,8 @@ Content-Type: application/json
 
 {
     "firstName": "John",
-    "lastName": "Afram",
-    "email": "johnafram@gmail.com",
+    "lastName": "Doe",
+    "email": "johndoe@gmail.com",
     "favoriteColor": "indigo",
     "birthday": "February 04, 1999"
 }
@@ -39,4 +39,4 @@ Content-Type: application/json
 
 // Delete a contact by its id
 ### Delete contact
-DELETE http://localhost:3000/contacts/67d93af03b46a97b367dc88f
+DELETE http://localhost:3000/contacts/67d93ea439a51dabd3e79f16
